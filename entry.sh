@@ -3,7 +3,7 @@
 # config caddy
 mkdir -p /etc/caddy/
 cat << EOF > /etc/caddy/Caddyfile
-:8080
+:$PORT
 root * /wwwroot
 file_server
 
