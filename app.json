@@ -1,7 +1,7 @@
 {
     "name": "mixcaddy",
-    "description": "v2ray with caddy ",
-    "keywords": ["mixcaddy"],
+    "description": "caddy ",
+    "keywords": ["caddy"],
     "website": "https://github.com/",
     "repository": "https://github.com/",
     "stack": "container"
