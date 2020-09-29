@@ -8,7 +8,7 @@ ADD entry.sh /entry.sh
 ADD index.html /usr/share/caddy/index.html
 RUN chmod +x /entry.sh
 
-CMD /usr/share/caddy/entry.sh
+CMD /entry.sh
 
 
 
