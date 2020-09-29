@@ -11,36 +11,17 @@ rm -rf /tmp/v2ray
 
 cat << EOF > /etc/config.json
 {
-	"inbounds": {
-		"port": "9090",
-		"listen": "127.0.0.1",
-		"protocol": "vmess",
-		"settings": {
-			"clients": [ 
-			    {
-			        "id": "580814c2-a784-44d0-9380-56aa03a7de75",
-			        "alterId": 64
-			    }
-			]
-		},
-		"streamSettings": {
-			"network": "ws",
-			"security": "auto",
-			"wsSettings": {
-				"path": "/ring"
-			}
-		}
-	},
-	"outbound": {
-		"protocol": "freedom",
-		"settings": {}
-	},
-	"dns": {
-		"servers": [ "176.103.130.130", "8.8.8.8", "1.1.1.1", "114.114.114.114"]
-	}
-}
+    "inbounds": 
+    [
+        {
+            "port": 9090,"listen": "127.0.0.1","protocol": "vmess",
+            "settings": {"clients": [{"id": "580814c2-a784-44d0-9380-56aa03a7de75", "alterId": 64}]},
+            "streamSettings": {"network": "ws", "security": "auto", "wsSettings": {"path": "/ring"}}
+        }
+    ],
+    "outbounds": [{"protocol": "freedom"}]
+}	
 EOF
-
 
 # config caddy
 mkdir -p /etc/caddy/
