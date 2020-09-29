@@ -9,7 +9,7 @@ ADD index.html /usr/share/caddy/index.html
 RUN chmod +x /usr/share/caddy/entry.sh
 
 EXPOSE 8080 
-CMD ["bash", "/usr/share/caddy/entry.sh"]
+CMD /usr/share/caddy/entry.sh
 
 
 
