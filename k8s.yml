@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ring
+  name: mixcaddy
 spec:
   selector:
     matchLabels:
-      app: ring
+      app: mixcaddy
   replicas: 1
   template:
     metadata:
       labels:
-        app: ring
+        app: mixcaddy
     spec:
       containers:
-      - name: ring
-        image: okteto.dev/ring:latest
+      - name: mixcaddy
+        image: okteto.dev/mixcaddy:latest
         ports:
         - containerPort: 8080
         
@@ -23,11 +23,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: ring
+  name: mixcaddy
 spec:
   type: LoadBalancer 
   ports:
     - name: http
       port: 8080
   selector:
-    app: ring
+    app: mixcaddy
