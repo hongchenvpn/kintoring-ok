@@ -50,12 +50,12 @@ cat << EOF > /etc/caddy/Caddyfile
 root * /wwwroot
 file_server
 
-@websockets_ring {
+@websockets_v2ray {
 header Connection *Upgrade*
 header Upgrade    websocket
 path /ring
 }
-reverse_proxy @websockets_ring 127.0.0.1:9090
+reverse_proxy @websockets_v2ray 127.0.0.1:9090
 EOF
 
 
