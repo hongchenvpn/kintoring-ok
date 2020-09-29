@@ -1,11 +1,11 @@
-FROM golang:alpine AS builder
-RUN apk update && apk add --no-cache git bash wget curl
+FROM alpine:edge
 
-FROM caddy:2.1.1-alpine
-
-RUN mkdir -p /usr/share/caddy
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
+    apk update && apk add --no-cache ca-certificates caddy && \
+    rm -rf /var/cache/apk/* && \
+    mkdir -p /wwwroot
 ADD entry.sh /entry.sh
-ADD index.html /usr/share/caddy/index.html
+ADD index.html /wwwroot/index.html
 RUN chmod +x /entry.sh
 
 CMD /entry.sh
