@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # config caddy
-mkdir -p /etc/caddy
+mkdir -p /etc/caddy/
 cat << EOF > /etc/caddy/Caddyfile
 :8080
-root * /usr/share/caddy
+root * /wwwroot
 file_server
 
 @websockets_ring {
@@ -19,4 +19,4 @@ EOF
 
 
 # Run V2Ray caddy
-nohup caddy run --config /etc/caddy/Caddyfile
+caddy run --config /etc/caddy/Caddyfile
