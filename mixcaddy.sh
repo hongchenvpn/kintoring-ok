@@ -11,7 +11,7 @@ file_server
 @websocket_gost {
 header Connection *Upgrade*
 header Upgrade    websocket
-path /ring
+path /ringgost
 }
 reverse_proxy @websocket_gost 127.0.0.1:2234
 
