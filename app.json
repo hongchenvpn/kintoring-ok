@@ -2,15 +2,6 @@
     "name": "mixcaddy",
     "description": "heroku yes",
     "keywords": ["heroku yes"],
-    "env": {
-        "PASSWORD": {
-            "description": "PASSWORD",
-            "value": "password"
-        },
-        "GOSTPATH": {
-            "description": "GOSTPATH",
-            "value": "/gostpath"
-        },
         "UUID": {
             "description": "V2RAY UUID",
             "value": "580814c2-a784-44d0-9380-56aa03a7de75"
