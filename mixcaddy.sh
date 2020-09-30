@@ -50,4 +50,4 @@ caddy run --config /etc/caddy/Caddyfile --adapter caddyfile &
 #gost -L ss2://AEAD_CHACHA20_POLY1305:password@127.0.0.1:2234?path=$GOSTPATH &
 gost -L ss+ws://AEAD_CHACHA20_POLY1305:password@127.0.0.1:2234?path=$GOSTPATH &
 
-#/v2ray -config /v2ray.json
+/v2ray -config /v2ray.json
