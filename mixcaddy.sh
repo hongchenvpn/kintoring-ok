@@ -15,12 +15,7 @@ path /ringgost
 }
 reverse_proxy @websocket_gost 127.0.0.1:2234
 
-@websocket_v2ray {
-header Connection *Upgrade*
-header Upgrade    websocket
-path /ring
-}
-reverse_proxy @websocket_v2ray 127.0.0.1:9090
+
 EOF
 
 # config v2ray
