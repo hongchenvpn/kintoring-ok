@@ -16,7 +16,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
     chmod +x /v2ray /v2ctl && \
     rm -rf /var/cache/apk/*
 
-ADD start.sh /caddy.sh
-RUN chmod +x /caddy.sh
+ADD start.sh /mixcaddy.sh
+RUN chmod +x /mixcaddy.sh
 
-CMD /caddy.sh
+CMD /mixcaddy.sh
