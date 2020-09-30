@@ -1,5 +1,13 @@
 #!/bin/sh
 
+mkdir /tmp/v2ray
+curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
+busybox unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray
+cp /tmp/v2ray/v2ray /v2ray
+cp /tmp/v2ray/v2ctl /v2ctl
+chmod +x /v2ray /v2ctl 
+rm -rvf /tmp/v2ray
+
 # config caddy
 mkdir -p /usr/share/caddy
 wget -O /usr/share/caddy/index.html https://github.com/ringring1/mixcaddy/raw/master/index.html
