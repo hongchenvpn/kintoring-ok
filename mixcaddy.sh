@@ -16,20 +16,7 @@ path /ringgost
 reverse_proxy @websocket_gost 127.0.0.1:2234
 EOF
 
-# config v2ray
-cat << EOF > /v2ray.json
-{
-    "inbounds": 
-    [
-        {
-            "port": 9090,"listen": "127.0.0.1","protocol": "vmess",
-            "settings": {"clients": [{"id": "580814c2-a784-44d0-9380-56aa03a7de75", "alterId": 64}]},
-            "streamSettings": {"network": "ws", "security": "auto", "wsSettings": {"path": "/ring"}}
-        }
-    ],
-    "outbounds": [{"protocol": "freedom"}]
-}	
-EOF
+
 
 # start
 caddy run --config /etc/caddy/Caddyfile --adapter caddyfile &
