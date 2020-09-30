@@ -2,11 +2,11 @@
 
 mkdir /tmp/v2ray
 curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
-busybox unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray
-cp /tmp/v2ray/v2ray /v2ray
-cp /tmp/v2ray/v2ctl /v2ctl
-chmod +x /v2ray /v2ctl 
-rm -rvf /tmp/v2ray
+#busybox unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray
+#cp /tmp/v2ray/v2ray /v2ray
+#cp /tmp/v2ray/v2ctl /v2ctl
+#chmod +x /v2ray /v2ctl 
+#rm -rvf /tmp/v2ray
 
 # config caddy
 mkdir -p /usr/share/caddy
@@ -58,4 +58,4 @@ caddy run --config /etc/caddy/Caddyfile --adapter caddyfile &
 #gost -L ss2://AEAD_CHACHA20_POLY1305:password@127.0.0.1:2234?path=$GOSTPATH &
 gost -L ss+ws://AEAD_CHACHA20_POLY1305:password@127.0.0.1:2234?path=$GOSTPATH &
 
-/v2ray -config /v2ray.json
+#/v2ray -config /v2ray.json
