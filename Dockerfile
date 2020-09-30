@@ -1,6 +1,5 @@
 FROM alpine:edge
 
-ENV PORT        3000
 ENV GOSTPATH    /gostpath
 ENV PASSWORD    password
 
