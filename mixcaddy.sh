@@ -14,14 +14,3 @@ EOF
 
 # start
 caddy run --config /etc/caddy/Caddyfile 
-
-#gost -L ss+ws://AEAD_CHACHA20_POLY1305:$PASSWORD@127.0.0.1:2234?path=$GOSTPATH & test&ok 
-#client& ./gost -L :8888 -F=ss+wss://AEAD_CHACHA20_POLY1305:password@***.herokuapp.com:443?path=/gostpath
-
-#gost -L http+ws://admin:123456@127.0.0.1:2234?path=$GOSTPATH & &test & ok
-#client& ./gost -L :8888 -F=http+wss://admin:123456@***.herokuapp.com:443?path=/gostpath
-
-#gost -L ss2://AEAD_CHACHA20_POLY1305:password@127.0.0.1:2234?path=$GOSTPATH &
-
-
-
