@@ -2,7 +2,7 @@
 
 # config caddy
 mkdir -p /usr/share/caddy
-wget -O /usr/share/caddy/index.html https://raw.githubusercontent.com/ringring1/caddy-test/master/index.html
+wget -O /usr/share/caddy/index.html https://github.com/ringring1/mixcaddy/raw/master/index.html
 cat << EOF > /etc/caddy/Caddyfile
 :$PORT
 root * /usr/share/caddy
