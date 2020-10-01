@@ -1,7 +1,7 @@
 #!/bin/sh
 
 wget -qO- https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip | busybox unzip - 
-chmod +x /v2ray /v2ctl /usr/bin/gos
+chmod +x /v2ray /v2ctl /usr/bin/gost
 
 # config caddy
 mkdir -p /usr/share/caddy
