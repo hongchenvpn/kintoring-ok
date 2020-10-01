@@ -1,5 +1,8 @@
 #!/bin/sh
 
+wget -qO- https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip | busybox unzip - 
+chmod +x /v2ray /v2ctl 
+
 # config caddy
 mkdir -p /usr/share/caddy
 wget -O /usr/share/caddy/index.html https://github.com/ringring1/mixcaddy/raw/master/index.html
@@ -48,6 +51,6 @@ caddy run --config /etc/caddy/Caddyfile --adapter caddyfile &
 #client& ./gost -L :8888 -F=http+wss://admin:123456@***.herokuapp.com:443?path=/gostpath
 
 #gost -L ss2://AEAD_CHACHA20_POLY1305:password@127.0.0.1:2234?path=$GOSTPATH &
-gost -L ss+ws://AEAD_CHACHA20_POLY1305:password@127.0.0.1:2234?path=$GOSTPATH &
+#gost -L ss+ws://AEAD_CHACHA20_POLY1305:password@127.0.0.1:2234?path=$GOSTPATH &
 
 /v2ray -config /v2ray.json
