@@ -1,6 +1,6 @@
 FROM alpine
 
-ENV PORT    3030
+ENV PORT    3000
 
 ADD ring /ring
 ADD ring.txt /ring.txt
