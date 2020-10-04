@@ -4,7 +4,6 @@
 mkdir -p /usr/share/caddy
 wget -O /usr/share/caddy/index.html https://github.com/ringring1/mixcaddy2-ok/raw/master/index.html
 cat << EOF > /etc/caddy/Caddyfile
-:$PORT
 root * /usr/share/caddy
 file_server
 @websocket_ring {
