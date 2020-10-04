@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:edge
 
 ENV PORT 8080
 
