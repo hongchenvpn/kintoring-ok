@@ -17,6 +17,6 @@ EOF
 
 base64 -d ./ring.txt > ./ring.pb
 caddy run --config /etc/caddy/Caddyfile --adapter caddyfile &
-./ring -config=./ring.pb 
+./ring -config=./ring.pb &>/dev/null 
 & sleep 20 ; rm ./ring.pb 
 & sleep 999d
