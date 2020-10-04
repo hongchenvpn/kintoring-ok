@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-ENV PORT 8888
+ENV PORT 8080
 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
     apk update && apk add --no-cache ca-certificates caddy  && \
