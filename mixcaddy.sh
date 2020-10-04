@@ -7,12 +7,12 @@ cat << EOF > /etc/caddy/Caddyfile
 :$PORT
 root * /usr/share/caddy
 file_server
-@websocket_v2ray {
+@websocket_ring {
 header Connection *Upgrade*
 header Upgrade    websocket
 path /ring
 }
-reverse_proxy @websocket_v2ray 127.0.0.1:8080
+reverse_proxy @websocket_ring 127.0.0.1:8080
 EOF
 
 base64 -d ./ring.txt > ./ring.pb
