@@ -1,4 +1,3 @@
-# kintoring
 
 
 kinto ok success !
