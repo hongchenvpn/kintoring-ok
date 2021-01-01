@@ -1,0 +1,10 @@
+{
+    "name": "kintoringok0101",
+    "description": "Deploy on u.",
+    "keywords": ["ring"],
+    "env": {
+    },
+    "website": "https://",
+    "repository": "https://github.com/ringring1/",
+    "stack": "container"
+}
